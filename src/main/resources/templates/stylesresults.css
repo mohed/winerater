@@ -1,0 +1,9 @@
+body{
+    background-color: antiquewhite;
+}
+
+div {
+    display: flex;
+    display: inline-block;
+    flex-direction: row;
+}
