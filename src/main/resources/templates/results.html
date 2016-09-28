@@ -10,12 +10,15 @@
 
     <div id="articlenumber">
         <h3>Artikelnummer</h3>
-        <li th:each = "wine : ${getMatchingWines}">
-            <span th:text = "${wine}"/>
+        <li th:each = "wine : ${matchingWines}">
+            <span th:text = "${wine.artnum}"/>
         </li>
     </div>
     <div id="name">
         <h3>Namn</h3>
+        <li th:each = "wine : ${matchingWines}">
+            <span th:text = "${wine.name}"/>
+        </li>
     </div>
     <div id="price">
         <h3>Pris</h3>
