@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Vinlista</title>
@@ -10,6 +10,9 @@
 
     <div id="articlenumber">
         <h3>Artikelnummer</h3>
+        <li th:each = "wine : ${getMatchingWines}">
+            <span th:text = "${wine}"/>
+        </li>
     </div>
     <div id="name">
         <h3>Namn</h3>
