@@ -1,4 +1,5 @@
-com\example\WineraterApplication.class
+com\example\mohedsclass.class
 com\example\Wine.class
 com\example\SQLWineRepository.class
 com\example\WineRepository.class
+com\example\WineraterApplication.class
