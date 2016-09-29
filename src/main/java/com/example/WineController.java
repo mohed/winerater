@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class WineController {
 
-    @GetMapping("/results")
+    @RequestMapping("/results")
     public ModelAndView matchingWines(){
 
         return new ModelAndView("results");

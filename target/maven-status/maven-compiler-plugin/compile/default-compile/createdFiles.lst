@@ -1,5 +1,7 @@
+com\example\WineController.class
 com\example\Wine.class
-com\example\SQLWineRepository.class
+com\example\WineRepositoryException.class
 com\example\WineRepository.class
+com\example\SQLWineRepository.class
 com\example\DbTestController.class
 com\example\WineraterApplication.class
