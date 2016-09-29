@@ -29,7 +29,7 @@ public class SQLWineRepository implements WineRepository {
     public List<Wine> listWines() {
         try (Connection conn = dataSource.getConnection();
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM [dbo].[Products] ")) {
+             ResultSet rs = stmt.executeQuery("SELECT ProductID, ProductName FROM [dbo].[Products]")) {
             List<Wine> wines = new ArrayList<>();
             while (rs.next()) wines.add(rsWine(rs));
             return wines;
