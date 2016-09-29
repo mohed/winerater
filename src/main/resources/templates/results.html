@@ -22,9 +22,15 @@
     </div>
     <div id="price">
         <h3>Pris</h3>
+        <li th:each = "wine : ${matchingWines}">
+            <span th:text = "${wine.price}"/>
+        </li>
     </div>
     <div id="year">
         <h3>Årgång</h3>
+        <li th:each = "wine : ${matchingWines}">
+            <span th:text = "${wine.year}"/>
+        </li>
     </div>
 
 

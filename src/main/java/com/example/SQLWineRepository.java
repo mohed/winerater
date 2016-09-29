@@ -47,6 +47,6 @@ public class SQLWineRepository implements WineRepository {
     }
 
     private Wine rsWine(ResultSet rs) throws SQLException {
-        return new Wine(rs.getString("ProductName"), rs.getInt("ProductID"), rs.getInt("Price"), rs.getInt("Year"));
+        return new Wine(rs.getString("ProductName"), rs.getInt("ProductID"), rs.getInt("Year"), rs.getInt("Price"));
     }
 }
