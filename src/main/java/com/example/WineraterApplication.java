@@ -12,15 +12,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//@Controller
 @SpringBootApplication
 public class WineraterApplication {
-//
-//	@GetMapping("/")
-//    public ModelAndView init(){
-//        ModelAndView modelAndView = new ModelAndView("index");
-//        return modelAndView;
-//    }
+
     public static void main(String[] args)throws SQLException {
 		SpringApplication.run(WineraterApplication.class, args);
 	}
