@@ -25,7 +25,7 @@ public class SQLWineRepository implements WineRepository {
     @Override
     public List<Wine> listWines(int articlenumber) {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT TOP 2 P.ProductID, P.ProductName " +
+             PreparedStatement ps = conn.prepareStatement("SELECT TOP 2 P.ProductID, P.ProductName, P.Price, P.Year " +
                      "FROM Products AS P " +
                      "INNER JOIN Countries AS C " +
                      "ON P.Country_ID = C.CountryID " +
@@ -47,6 +47,6 @@ public class SQLWineRepository implements WineRepository {
     }
 
     private Wine rsWine(ResultSet rs) throws SQLException {
-        return new Wine(rs.getInt("ProductID"), rs.getString("ProductName"));
+        return new Wine(rs.getInt("ProductID"), rs.getString("ProductName"), rs.getInt("Price"), rs.getInt("Year"));
     }
 }
