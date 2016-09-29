@@ -5,10 +5,15 @@ package com.example;
  */
 public class Wine {
     public final String name;
-    public final long artnum;
+    public final int artnum;
+    public final int year;
+    public final int price;
 
-    public Wine(long artnum, String name) {
+
+    public Wine(String name, int artnum, int year, int price) {
         this.name = name;
         this.artnum = artnum;
+        this.year = year;
+        this.price = price;
     }
 }
