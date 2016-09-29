@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Vinlista</title>
-    <link rel="stylesheet" href = "../static/stylesresults.css"/>
+    <link rel="stylesheet" href = "./stylesresults.css"/>
 </head>
 <body>
     <h1>Vinlista</h1>
@@ -20,12 +20,18 @@
             <span th:text = "${wine.name}"/>
         </li>
     </div>
-    <div id="price">
-        <h3>Pris</h3>
-    </div>
-    <div id="year">
-        <h3>Årgång</h3>
-    </div>
+    <!--<div id="price">-->
+        <!--<h3>Pris</h3>-->
+        <!--<li th:each = "wine : ${matchingWines}">-->
+            <!--<span th:text = "${wine.price}"/>-->
+        <!--</li>-->
+    <!--</div>-->
+    <!--<div id="year">-->
+        <!--<h3>Årgång</h3>-->
+        <!--<li th:each = "wine : ${matchingWines}">-->
+            <!--<span th:text = "${wine.year}"/>-->
+        <!--</li>-->
+    <!--</div>-->
 
 
     <a href="/index.html">Startsida</a>
