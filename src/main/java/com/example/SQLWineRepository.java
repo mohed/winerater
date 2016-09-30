@@ -58,3 +58,12 @@ public class SQLWineRepository implements WineRepository {
         return new Wine(rs.getString("ProductName"), rs.getInt("ProductID"), rs.getInt("Year"), rs.getInt("Price"), rs.getInt("Rating"));
     }
 }
+
+    SELECT P.ProductID, P.ProductName, P.Price, P.Year
+        FROM Ratings AS R
+        INNER JOIN Users AS U
+        ON U.UserID = R.User_ID
+        INNER JOIN Products AS P
+        ON P.ProductID = R.Product_ID
+        WHERE U.UserID = (SELECT UserID FROM Users WHERE UserName = 'VilmaV')
+        AND R.Rating > 3
