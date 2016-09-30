@@ -4,19 +4,35 @@ body{
     background-size: cover;
 }
 
-/*div {*/
-    /*display: flex;*/
-    /*display: inline-block;*/
-    /*flex-direction: row;*/
-    /*align-content: flex-end;*/
-/*}*/
-a {
-    display: flex;
+#start{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
 }
-div {
+
+
+.listitem{
     display: flex;
-    display: inline-block;
-    flex-direction: column;
+
+    flex-direction: row;
+    height: 100vh;
+
     align-items: center;
-    opacity: 80;
+    justify-content: center;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.theForm{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+
+    opacity: 50;
 }
