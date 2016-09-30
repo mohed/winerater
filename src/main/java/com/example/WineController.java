@@ -17,7 +17,7 @@ public class WineController {
         return new ModelAndView("index");
     }
 
-    @PostMapping("/")
+    @PostMapping("/results")
     public ModelAndView matchingWines(@RequestParam int articlenumber){
         List<Wine> wines = wineRepository.listWines(articlenumber);
         return new ModelAndView("results").addObject("matchingWines", wines);
