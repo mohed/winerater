@@ -2,6 +2,7 @@ package com.example;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,6 +47,11 @@ public class SQLWineRepository implements WineRepository {
         } catch (SQLException e) {
             throw new WineRepositoryException(e);
         }
+    }
+
+    @Override
+    public List<Wine> listWinesUserHistory(String username){
+        return null;
     }
 
     private Wine rsWine(ResultSet rs) throws SQLException {

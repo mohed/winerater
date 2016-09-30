@@ -7,9 +7,17 @@
 </head>
 <body>
 <h1>Vinlista</h1>
+<h1 th:text="'Välkommen tillbaka, ' + ${username} + '!'"> Välkommen tillbaka, Anonymous!</h1>
 
 <div id="formContainerResults">
     <div id="blockResults"></div>
+    <div>
+        <form action="user" method="POST" class="theForm">
+            <input placeholder="Artikelnummer" name="articlenumber"/>
+            <input type="hidden" name="username" th:value="${username}"/>
+            <input type="submit"/>
+        </form>
+    </div>
     <div class="listitem">
         <div id="articlenumber">
             <h3>Artikelnummer</h3>
@@ -53,6 +61,5 @@
 </div>
 
 <a href="/" id="start">Startsida</a>
-
 </body>
 </html>
