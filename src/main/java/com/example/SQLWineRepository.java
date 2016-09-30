@@ -29,9 +29,11 @@ public class SQLWineRepository implements WineRepository {
                      "FROM Products AS P " +
                      "INNER JOIN Countries AS C " +
                      "ON P.Country_ID = C.CountryID " +
-                     "WHERE C.Country = (SELECT C.Country FROM Countries AS C INNER JOIN Products AS P ON C.CountryID = P.Country_ID WHERE P.ProductID = ?) " +
+                     "WHERE C.Country = (SELECT CC.Country FROM Countries AS CC INNER JOIN Products AS PP ON CC.CountryID = PP.Country_ID WHERE PP.ProductID = ?) " +
+                     "AND P.ProductID != ? " +
                      "ORDER BY P.Rating DESC")) {
             ps.setInt(1, articlenumber);
+            ps.setInt(2, articlenumber);
             try (ResultSet rs = ps.executeQuery()) {
                 if (!rs.isBeforeFirst()) throw new WineRepositoryException("Inget vin");
                 else {
