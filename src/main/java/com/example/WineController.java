@@ -28,4 +28,9 @@ public class WineController {
         return new ModelAndView("results");
     }
 
+    @GetMapping("/user")
+    public ModelAndView userPage(@RequestParam String username){
+        ModelAndView modelAndView = new ModelAndView("user");
+        return modelAndView;
+    }
 }
