@@ -8,32 +8,40 @@
 <body>
     <h1>Vinlista</h1>
 
-    <div id="articlenumber">
-        <h3>Artikelnummer</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.artnum}"/>
-        </li>
-    </div>
-    <div id="name">
-        <h3>Namn</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.name}"/>
-        </li>
-    </div>
-    <div id="price">
-        <h3>Pris</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.price}"/>
-        </li>
-    </div>
-    <div id="year">
-        <h3>Årgång</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.year}"/>
-        </li>
+    <div class="listitem">
+        <div id="articlenumber">
+            <h3>Artikelnummer</h3>
+            <li th:each = "wine : ${matchingWines}">
+                <span th:text = "${wine.artnum}"/>
+            </li>
+        </div>
+        <div id="name">
+            <h3>Namn</h3>
+            <li th:each = "wine : ${matchingWines}">
+                <span th:text = "${wine.name}"/>
+            </li>
+        </div>
+        <div id="price">
+            <h3>Pris</h3>
+            <li th:each = "wine : ${matchingWines}">
+                <span th:text = "${wine.price}"/>
+            </li>
+        </div>
+        <div id="year">
+            <h3>Årgång</h3>
+            <li th:each = "wine : ${matchingWines}">
+                <span th:text = "${wine.year}"/>
+            </li>
+        </div>
+        <div id="rating">
+            <h3>Rankning</h3>
+            <li th:each = "wine : ${matchingWines}">
+                <span th:text = "${wine.rating}"/>
+            </li>
+        </div>
     </div>
 
 
-    <a href="/">Startsida</a>
+    <a href="/" id="start">Startsida</a>
 </body>
 </html>
