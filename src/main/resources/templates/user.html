@@ -6,34 +6,53 @@
     <link rel="stylesheet" href = "styles.css"/>
 </head>
 <body>
-    <h1>Vinlista</h1>
+<h1>Vinlista</h1>
 
-    <div id="articlenumber">
-        <h3>Artikelnummer</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.artnum}"/>
-        </li>
+<div id="formContainerResults">
+    <div id="blockResults"></div>
+    <div class="listitem">
+        <div id="articlenumber">
+            <h3>Artikelnummer</h3>
+            <ul style="list-style: none;">
+                <li th:each = "wine : ${matchingWines}">
+                    <span th:text = "${wine.artnum}"/>
+                </li>
+            </ul>
+        </div>
+        <div id="name">
+            <h3>Namn</h3>
+            <ul style="list-style: none;">
+                <li th:each = "wine : ${matchingWines}">
+                    <span th:text = "${wine.name}"/>
+                </li>
+            </ul>
+        </div>
+        <div id="price">
+            <h3>Pris</h3>
+            <ul style="list-style: none;">
+                <li th:each = "wine : ${matchingWines}">
+                    <span th:text = "${wine.price}"/>
+                </li>
+            </ul>
+        </div>
+        <div id="year">
+            <h3>Årgång</h3>
+            <ul style="list-style: none;">
+                <li th:each = "wine : ${matchingWines}">
+                    <span th:text = "${wine.year}"/>
+                </li>
+            </ul>
+        </div>
+        <!--<div id="rating">-->
+        <!--<h3>Rankning</h3>-->
+        <!--<li th:each = "wine : ${matchingWines}">-->
+        <!--<span th:text = "${wine.rating}"/>-->
+        <!--</li>-->
+        <!--</div>-->
     </div>
-    <div id="name">
-        <h3>Namn</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.name}"/>
-        </li>
-    </div>
-    <div id="price">
-        <h3>Pris</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.price}"/>
-        </li>
-    </div>
-    <div id="year">
-        <h3>Årgång</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.year}"/>
-        </li>
-    </div>
+</div>
 
+<a href="/" id="start">Startsida</a>
 
-    <a href="/">Startsida</a>
 </body>
 </html>
