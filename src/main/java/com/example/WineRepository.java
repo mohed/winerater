@@ -7,4 +7,6 @@ import java.util.List;
  */
 public interface WineRepository {
     List<Wine> listWines(int articlenumber);
+
+    List<Wine> listWinesUserHistory(String username);
 }

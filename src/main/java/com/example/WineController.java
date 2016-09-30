@@ -31,6 +31,16 @@ public class WineController {
     @GetMapping("/user")
     public ModelAndView userPage(@RequestParam String username){
         ModelAndView modelAndView = new ModelAndView("user");
+        modelAndView.addObject("username", username);
+        return modelAndView;
+    }
+
+    @PostMapping("/user")
+    public ModelAndView userPageWithWineList(@RequestParam String username, @RequestParam int articlenumber){
+        ModelAndView modelAndView = new ModelAndView("user");
+        modelAndView.addObject("username", username);
+        List<Wine> wines = wineRepository.listWines(articlenumber);
+        modelAndView.addObject("matchingWines", wines);
         return modelAndView;
     }
 }

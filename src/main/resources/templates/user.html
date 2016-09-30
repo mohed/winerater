@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Vinlista</title>
-    <link rel="stylesheet" href = "styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h1>Vinlista</h1>
+<h1 th:text="'Välkommen tillbaka, ' + ${username} + '!'"> Välkommen tillbaka, Anonymous!</h1>
 
+<div>
+    <form action="user" method="POST" class="theForm">
+        <input placeholder="Artikelnummer" name="articlenumber"/>
+        <input type="hidden" name="username" th:value="${username}"/>
+        <input type="submit"/>
+    </form>
+</div>
+
+<div>
     <div id="articlenumber">
         <h3>Artikelnummer</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.artnum}"/>
+        <li th:each="wine : ${matchingWines}">
+            <span th:text="${wine.artnum}"/>
         </li>
     </div>
     <div id="name">
         <h3>Namn</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.name}"/>
+        <li th:each="wine : ${matchingWines}">
+            <span th:text="${wine.name}"/>
         </li>
     </div>
     <div id="price">
         <h3>Pris</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.price}"/>
+        <li th:each="wine : ${matchingWines}">
+            <span th:text="${wine.price}"/>
         </li>
     </div>
     <div id="year">
         <h3>Årgång</h3>
-        <li th:each = "wine : ${matchingWines}">
-            <span th:text = "${wine.year}"/>
+        <li th:each="wine : ${matchingWines}">
+            <span th:text="${wine.year}"/>
         </li>
     </div>
-
-
-    <a href="/">Startsida</a>
+</div>
+<a href="/">Startsida</a>
 </body>
 </html>
