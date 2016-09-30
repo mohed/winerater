@@ -17,7 +17,7 @@ public class WineController {
         return new ModelAndView("index");
     }
 
-    @PostMapping("/")
+    @PostMapping("/results")
     public ModelAndView matchingWines(@RequestParam int articlenumber){
         List<Wine> wines = wineRepository.listWines(articlenumber);
         return new ModelAndView("results").addObject("matchingWines", wines);
@@ -28,4 +28,9 @@ public class WineController {
         return new ModelAndView("results");
     }
 
+    @GetMapping("/user")
+    public ModelAndView userPage(@RequestParam String username){
+        ModelAndView modelAndView = new ModelAndView("user");
+        return modelAndView;
+    }
 }

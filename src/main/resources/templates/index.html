@@ -6,11 +6,15 @@
     <link rel="Stylesheet" href = "styles.css"/>
 </head>
 <body>
-<div>
+<div id="theForm">
     <div>
         <h1 id="title">Wine Rater 1.0</h1>
-        <form action="/" method="POST" class="theForm">
+        <form action="results" method="POST" class="theForm">
             <input placeholder="Artikelnummer" name="articlenumber"/>
+            <input type="submit"/>
+        </form>
+        <form action="user" method="GET" class="theForm">
+            <input placeholder="Användarnamn" name="username"/>
             <input type="submit"/>
         </form>
     </div>
